@@ -87,5 +87,5 @@ url@1.0.5
 webapp@1.2.2
 webapp-hashing@1.0.5
 webpack:npmworkaround@0.1.0
-webpack:reload@0.1.4
-webpack:webpack@0.2.6
+webpack:reload@0.1.5
+webpack:webpack@0.2.7
