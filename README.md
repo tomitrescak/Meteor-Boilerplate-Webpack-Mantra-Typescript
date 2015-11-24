@@ -21,7 +21,7 @@ Clone this project to start a FlowRouter project using Meteor, React.js and Webp
 - Webpack (bundle your app / assets and send them to Meteor)
 - Hot-reload with no page refresh in development mode
 - Optimize your code in production mode
-- Give access to NPM by using packages.json
+- Give access to NPM by using [`webpack.packages.json`](https://github.com/thereactivestack/kickstart-flowrouter/blob/master/webpack.packages.json)
 
 # Production
 You can use meteor run, meteor build, mup or anything working with Meteor.
