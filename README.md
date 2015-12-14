@@ -9,7 +9,7 @@ If you would like a more sophisticated kickstart with code splitting, see the [k
 Clone this project to start a FlowRouter project using Meteor, React.js and Webpack.
 
 1. `git clone https://github.com/thereactivestack/kickstart-flowrouter.git`
-1. `cd kickstart-simple`
+1. `cd kickstart-flowrouter`
 1. `meteor`
 
 ## The stack & features
