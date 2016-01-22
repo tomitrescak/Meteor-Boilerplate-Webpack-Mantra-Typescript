@@ -24,7 +24,9 @@ export const composer = ({context, postId}, onData) => {
   }
 };
 
+const Loading = () => (<p>Custom loading ...</p>);
+
 export default composeAll(
-  composeWithTracker(composer),
+  composeWithTracker(composer, Loading),
   useDeps()
 )(Post);
