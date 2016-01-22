@@ -11,7 +11,6 @@
     "suppressImplicitAnyIndexErrors": true,
     "jsx": "preserve",
     "experimentalDecorators": true,
-    "experimentalAsyncFunctions": true,
     "sourceMap": true
   },
   "awesomeTypescriptLoaderOptions": {
@@ -78,5 +77,8 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }
