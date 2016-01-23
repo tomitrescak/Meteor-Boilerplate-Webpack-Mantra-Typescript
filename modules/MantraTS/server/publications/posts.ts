@@ -3,6 +3,8 @@ import { Posts, Comments} from "../../collections/collections";
 //import {Meteor} from 'meteor/meteor';
 //import {check} from 'meteor/check';
 
+console.log("oo");
+
 Meteor.publish('posts.list', function () {
   const selector = {};
   const options = {
@@ -11,7 +13,7 @@ Meteor.publish('posts.list', function () {
     limit: 10
   };
 
-  //return Posts.find(selector, options);
+  return Posts.find(selector, options);
 });
 
 Meteor.publish('posts.single', function (postId: string) {
