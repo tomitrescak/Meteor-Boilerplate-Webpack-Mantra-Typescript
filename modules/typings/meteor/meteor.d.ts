@@ -73,6 +73,8 @@ declare module Meteor {
     loginStyle?: string;
   }
 
+  function _sleepForMs(time: number): void;
+
   function loginWithMeteorDeveloperAccount(options?:Meteor.LoginWithExternalServiceOptions, callback?:Function):void;
 
   function loginWithFacebook(options?:Meteor.LoginWithExternalServiceOptions, callback?:Function):void;
@@ -640,14 +642,14 @@ declare module Mongo {
       sort?: Mongo.SortSpecifier;
       skip?: number;
       limit?: number;
-      fields?: Mongo.FieldSpecifier;
+      fields?: any;
       reactive?: boolean;
       transform?: Function;
     }): Mongo.Cursor<T>;
     findOne(selector?:any, options?:{
       sort?: Mongo.SortSpecifier;
       skip?: number;
-      fields?: Mongo.FieldSpecifier;
+      fields?: any;
       reactive?: boolean;
       transform?: Function;
     }): T;

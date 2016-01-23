@@ -22,7 +22,7 @@
   "redbox-react": "^1.2.0",
 
   "ts-loader": "^0.7.2",
-  "typescript": "^1.6.2",
+  "typescript": "next",
   "jsx-control-statements": "^2.0.1",
   "semantic-ui-css": "^2.1.4",
 

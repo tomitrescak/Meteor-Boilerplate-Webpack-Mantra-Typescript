@@ -1,4 +1,6 @@
 import 'TodoAppTS/todo-methods';
 import 'TodoAppTS/server/todo-subscriptions'
 
-import 'Mantra/server/main';
+//import 'Mantra/server/main';
+
+import 'MantraTS/server/main';
