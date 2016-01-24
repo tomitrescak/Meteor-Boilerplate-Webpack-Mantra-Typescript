@@ -23,11 +23,10 @@ export default class TodoMain extends React.Component<{}, State> {
     Meteor.subscribe("tasks");
 
     let taskFilter = {
-      checked: {}
     };
 
     if (this.state.hideCompleted) {
-      taskFilter.checked = {$ne: true};
+      taskFilter["checked"] = {$ne: true};
     }
 
     const tasks = Tasks.find(taskFilter, {sort: {createdAt: -1}}).fetch();
