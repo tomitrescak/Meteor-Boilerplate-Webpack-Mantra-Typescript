@@ -1,6 +1,6 @@
-import React from "react"; 
-//import ReactMixin from "react-mixin";
-//import ReactMeteorData from "react-meteor-data";
+import React from "react";
+import ReactMixin from "react-mixin";
+import ReactMeteorData from "react-meteor-data";
 
 import TodoHeader from "./components/TodoHeader";
 import TodoList from "./components/TodoList";
@@ -11,7 +11,7 @@ interface State {
   hideCompleted: boolean;
 }
 
-//@ReactMixin.decorate(ReactMeteorData)
+@ReactMixin.decorate(ReactMeteorData)
 export default class TodoMain extends React.Component<{}, State> {
   data: any;
 

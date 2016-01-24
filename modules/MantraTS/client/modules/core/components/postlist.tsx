@@ -7,7 +7,7 @@ const PostList = ({posts}) => (
     <ul>
       { posts.map((post: IPosts) => (
         <li key={post._id}>
-          <a href={`/post/${post._id}`}>{post.title}</a>
+          <a href={`/mantra/post/${post._id}`}>{post.title}</a>
         </li>
       ))}
     </ul>

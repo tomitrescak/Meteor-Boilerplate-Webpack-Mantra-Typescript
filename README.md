@@ -11,6 +11,10 @@ rewritten in Typescript. Application is accessible on http://localhost:3000/mant
 3. **Mantra-Base** is a **javascript** version of [Mantra application](https://github.com/mantrajs/mantra-sample-blog-app/tree/mantra-modules) working with Kickstart project. This application is not accessible and has to be configured in "entry/client/entry.js"
 4. **Mantra-Modules** is a **javascript** version of [Mantra application with modules](https://github.com/mantrajs/mantra-sample-blog-app) working with Kickstart project. This application is not accessible and has to be configured in "entry/client/entry.js"
 
+### Notes for Hot code reload 
+
+Please note, that hot code reload currently does not support the React stateless components `const PostList = ({posts}) => ( ... )`. To apply hot code reload you need to use standard components: `class NewPost extends React.Component { ... }`.
+
 # Quick start
 
 Clone this project to start a FlowRouter project using Meteor, React.js and Webpack.

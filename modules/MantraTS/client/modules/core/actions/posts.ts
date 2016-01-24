@@ -14,7 +14,7 @@ export default {
         return LocalState.set('SAVING_ERROR', err.message);
       }
     });
-    FlowRouter.go(`/post/${id}`);
+    FlowRouter.go(`/mantra/post/${id}`);
   },
 
   clearErrors({LocalState}) {
