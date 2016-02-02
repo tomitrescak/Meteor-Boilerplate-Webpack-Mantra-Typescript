@@ -1,12 +1,12 @@
 import {
   useDeps, composeWithTracker, composeAll
-} from "../../../configs/mantra";
-import Component from "../components/create_comment";
+} from 'mantra-core';
+import Component from '../components/create_comment';
 
+import { IKomposer, IKomposerData } from "mantra-core";
 import { IContext } from "../../../configs/context";
-import { IKomposer, IKomposerData } from "react-komposer";
- 
-export const composer: IKomposer = ({context, clearErrors}, onData: IKomposerData) => {
+
+export const composer: IKomposer = ({context, clearErrors, postId}, onData: IKomposerData) => {
   const {LocalState} = context();
   const error = LocalState.get('CREATE_COMMENT_ERROR');
   onData(null, {error});

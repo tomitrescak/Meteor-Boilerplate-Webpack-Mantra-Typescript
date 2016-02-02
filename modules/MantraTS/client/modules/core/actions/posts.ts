@@ -1,5 +1,8 @@
+import { IContext } from "../../../configs/context";
+
 export default {
-  create({Meteor, LocalState, FlowRouter}, title: string, content: string) {
+
+  create({Meteor, LocalState, FlowRouter}: IContext, title: string, content: string) {
     if (!title || !content) {
       return LocalState.set('SAVING_ERROR', 'Title & Content are required!');
     }
@@ -14,7 +17,7 @@ export default {
         return LocalState.set('SAVING_ERROR', err.message);
       }
     });
-    FlowRouter.go(`/mantra/post/${id}`);
+    FlowRouter.go(`/post/${id}`);
   },
 
   clearErrors({LocalState}) {

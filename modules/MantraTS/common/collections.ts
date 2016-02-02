@@ -1,4 +1,4 @@
-// import {Mongo} from 'meteor/mongo';
+//import {Mongo} from 'meteor/mongo';
 
 export interface IPosts {
   _id: string;
@@ -19,10 +19,5 @@ export interface ICollections {
   Comments: Mongo.Collection<IComments>
 }
 
-export let Posts = new Mongo.Collection<IPosts>('posts');
-export let Comments = new Mongo.Collection<IComments>('comments');
-
-export default {
-  Posts,
-  Comments
-};
+export const Posts = new Mongo.Collection('posts');
+export const Comments = new Mongo.Collection('comments');

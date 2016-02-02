@@ -1,11 +1,9 @@
 import NewPost from '../components/newpost';
-import {useDeps} from 'react-simple-di';
-import {composeWithTracker, composeAll} from 'react-komposer';
+import {useDeps, composeWithTracker, composeAll, IKomposer, IKomposerData, IDepsMapper} from 'mantra-core';
 
-import { IContext } from "../../../configs/context";
-import { IKomposer, IKomposerData } from "react-komposer";
 
-export const composer: IKomposer = ({ context, clearErrors }, onData: IKomposerData) => {
+
+export const composer: IKomposer = ({context, clearErrors}, onData: IKomposerData) => {
   const {LocalState} = context();
   const error = LocalState.get('SAVING_ERROR');
   onData(null, {error});
@@ -14,7 +12,7 @@ export const composer: IKomposer = ({ context, clearErrors }, onData: IKomposerD
   return clearErrors;
 };
 
-export const depsMapper = (context: IContext, actions: any) => ({
+export const depsMapper: IDepsMapper = (context, actions) => ({
   create: actions.posts.create,
   clearErrors: actions.posts.clearErrors,
   context: () => context

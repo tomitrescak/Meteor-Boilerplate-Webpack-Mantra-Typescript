@@ -1,4 +1,4 @@
-import { Posts } from "../../collections/collections";
+import {Posts} from '../../common/collections';
 
 export default function () {
   if (!Posts.findOne()) {

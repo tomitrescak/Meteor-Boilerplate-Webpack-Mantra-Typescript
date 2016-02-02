@@ -1,5 +1,4 @@
-import {Posts} from "../../libs/collections";
-
+import {Posts, Comments} from 'Mantra-Modules/lib/collections';
 //import {Meteor} from 'meteor/meteor';
 //import {check} from 'meteor/check';
 

@@ -1,4 +1,4 @@
-import {Posts, Comments} from "../../collections/collections";
+import {Posts, Comments} from '../../common/collections';
 //import {Meteor} from 'meteor/meteor';
 //import {check} from 'meteor/check';
 

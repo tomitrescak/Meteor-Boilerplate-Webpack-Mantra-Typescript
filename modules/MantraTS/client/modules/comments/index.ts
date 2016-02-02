@@ -1,5 +1,5 @@
-import methodStubs from "./configs/method_stubs";
-import actions from "./actions";
+import methodStubs from './configs/method_stubs';
+import actions from './actions';
 
 import { IContext } from "../../configs/context";
 
@@ -8,4 +8,4 @@ export default {
   load(context: IContext) {
     methodStubs(context);
   }
-}
+};

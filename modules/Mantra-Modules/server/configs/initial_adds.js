@@ -1,4 +1,4 @@
-import {Posts} from "../../libs/collections";
+import {Posts} from 'Mantra-Modules/lib/collections';
 
 export default function () {
   if (!Posts.findOne()) {

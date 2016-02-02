@@ -1,9 +1,6 @@
-import { Posts, Comments} from "../../collections/collections";
-
+import {Posts, Comments} from '../../common/collections';
 //import {Meteor} from 'meteor/meteor';
 //import {check} from 'meteor/check';
-
-console.log("oo");
 
 Meteor.publish('posts.list', function () {
   const selector = {};
@@ -16,13 +13,13 @@ Meteor.publish('posts.list', function () {
   return Posts.find(selector, options);
 });
 
-Meteor.publish('posts.single', function (postId: string) {
+Meteor.publish('posts.single', function (postId: string): any {
   check(postId, String);
   const selector = {_id: postId};
   return Posts.find(selector);
 });
 
-Meteor.publish('posts.comments', function (postId: string) {
+Meteor.publish('posts.comments', function (postId: string): any {
   check(postId, String);
   const selector = {postId};
   return Comments.find(selector);

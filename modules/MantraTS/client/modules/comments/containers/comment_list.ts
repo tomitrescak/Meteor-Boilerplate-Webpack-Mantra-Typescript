@@ -1,10 +1,10 @@
 import {
   useDeps, composeWithTracker, composeAll
-} from '../../../configs/mantra';
+} from 'mantra-core';
 import Component from '../components/comment_list';
 
 import { IContext } from "../../../configs/context";
-import { IKomposer, IKomposerData } from "react-komposer";
+import { IKomposer, IKomposerData } from "mantra-core";
 
 export const composer: IKomposer = ({context, clearErrors, postId}, onData: IKomposerData) => {
   const {Meteor, Collections} = context();
@@ -12,12 +12,13 @@ export const composer: IKomposer = ({context, clearErrors, postId}, onData: IKom
     const options = {
       sort: {createdAt: -1}
     };
-    const comments = Collections.Comments.find({ postId }, options).fetch();
+    const comments = Collections.Comments.find({postId}, options).fetch();
     onData(null, {comments});
   } else {
     onData();
   }
-  return null;
+
+  return clearErrors;
 };
 
 export default composeAll(

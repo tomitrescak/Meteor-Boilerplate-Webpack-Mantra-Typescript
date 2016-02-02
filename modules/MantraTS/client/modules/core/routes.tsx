@@ -1,17 +1,20 @@
 import React from 'react';
-//import {FlowRouter} from 'meteor/kadira:flow-router';
 import {mount} from 'react-mounter';
 
-import MainLayout from '../modules/core/components/layout.main.jsx';
-import PostList from '../modules/core/containers/postlist';
-import Post from '../modules/core/containers/post';
-import NewPost from '../modules/core/containers/newpost';
+//import {FlowRouter} from 'meteor/kadira:flow-router';
 
-export default function (injectDeps) {
+import MainLayout from './components/layout.main';
+import PostList from './containers/postlist';
+import Post from './containers/post';
+import NewPost from './containers/newpost';
+
+import { IInjectDeps } from "mantra-core";
+
+export default function (injectDeps: IInjectDeps) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
   // Move these as a module and call this from a main file
-  FlowRouter.route('/mantra', {
+  FlowRouter.route('/', {
     name: 'posts.list',
     action() {
       mount(MainLayoutCtx, {
@@ -20,7 +23,7 @@ export default function (injectDeps) {
     }
   });
 
-  FlowRouter.route('/mantra/post/:postId', {
+  FlowRouter.route('/post/:postId', {
     name: 'posts.single',
     action({postId}) {
       mount(MainLayoutCtx, {
@@ -29,7 +32,7 @@ export default function (injectDeps) {
     }
   });
 
-  FlowRouter.route('/mantra/new-post', {
+  FlowRouter.route('/new-post', {
     name: 'newpost',
     action() {
       mount(MainLayoutCtx, {

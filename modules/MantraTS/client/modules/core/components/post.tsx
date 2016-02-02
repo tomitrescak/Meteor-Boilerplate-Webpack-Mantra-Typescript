@@ -1,9 +1,7 @@
 import React from 'react';
-import CommentList from '../../comments/containers/comment_list';
+import CommentList from "../../comments/components/comment_list";
 
-import { IPosts } from "../../../../collections/collections";
-
-const Post = ({ post }: {post: IPosts}) => (
+const Post = ({post}) => (
   <div>
     {post.saving ? <p>Saving...</p> : null}
     <h2>{post.title}</h2>
@@ -12,9 +10,9 @@ const Post = ({ post }: {post: IPosts}) => (
     </p>
     <div>
       <h4>Comments</h4>
-      <CommentList postId={post._id}/>
+      <CommentList postId={post._id} />
     </div>
   </div>
-);
+); 
 
 export default Post;

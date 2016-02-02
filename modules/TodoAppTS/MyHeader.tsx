@@ -3,7 +3,7 @@ import React from "react";
 //import BlazeTemplate from "../shared/blaze_template";
 //import { RouterUtils } from "../shared/helpers_client";
 
-  
+
 export default class TodoHeader extends React.Component<{}, {}> {
   render() {
     return <div style={{color: "white"}}>12359ee</div>;

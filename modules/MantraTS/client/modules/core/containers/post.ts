@@ -1,9 +1,5 @@
 import Post from '../components/post';
-import {useDeps} from 'react-simple-di';
-import {composeWithTracker, composeAll} from 'react-komposer';
-
-import { IContext } from "../../../configs/context";
-import { IKomposer, IKomposerData } from "react-komposer";
+import {useDeps, composeWithTracker, composeAll, IKomposer, IKomposerData} from 'mantra-core';
 
 export const composer: IKomposer = ({context, postId}, onData: IKomposerData) => {
   const {Meteor, Collections, Tracker} = context();
