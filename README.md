@@ -7,9 +7,7 @@ The project contains four different applications (located in the `modules` folde
 
 1. **MantraTS** - is an example blog application based on [Mantra with **modules**](https://github.com/mantrajs/mantra-sample-blog-app/tree/mantra-modules)
 rewritten in Typescript. Application is accessible on http://localhost:3000/mantra.
-2. **TodoAppTS** - is an example Typescript application with a standard Meteor architecture. Application is accessible on http://localhost:3000/todo.
-3. **Mantra-Base** is a **javascript** version of [Mantra application](https://github.com/mantrajs/mantra-sample-blog-app/tree/mantra-modules) working with Kickstart project. This application is not accessible and has to be configured in "entry/client/entry.js"
-4. **Mantra-Modules** is a **javascript** version of [Mantra application with modules](https://github.com/mantrajs/mantra-sample-blog-app) working with Kickstart project. This application is not accessible and has to be configured in "entry/client/entry.js"
+2. **Mantra** is a **javascript** version of [Mantra application with modules](https://github.com/mantrajs/mantra-sample-blog-app) working with Kickstart project. This application is not accessible and has to be configured in "entry/client/entry.js"
 
 ### Notes for Hot code reload 
 
